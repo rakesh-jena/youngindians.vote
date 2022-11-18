@@ -91,6 +91,17 @@ function showPosition(position) {
     });
 }
 
+function checkVisible(elm, eval) {
+    eval = eval || "visible";
+    var vpH = $(window).height(), // Viewport Height
+        st = $(window).scrollTop(), // Scroll Top
+        y = $(elm).offset().top,
+        elementHeight = $(elm).height();
+
+    if (eval == "visible") return ((y < (vpH + st)) && (y > (st - elementHeight)));
+    if (eval == "above") return ((y < (vpH + st)));
+}
+
 // AJAX
 $(document).ready(function () {
     if (isMobile) {
@@ -134,9 +145,21 @@ $(document).ready(function () {
             },
             success: function (res) {
                 $('.event-detail-modal').empty().append(res);
+                $('input.input').on('focus', function () {
+                    $(this).parents('div.input-div').addClass('focus');
+                }).on('blur', function () {
+                    $(this).parents('div.input-div').removeClass('focus');
+                });
             }
         });
     });
+    $('#hostModal').on('show.bs.modal', function (e) {
+        $('input.input').on('focus', function () {
+            $(this).parents('div.input-div').addClass('focus');
+        }).on('blur', function () {
+            $(this).parents('div.input-div').removeClass('focus');
+        });
+    })
 
     //CountDown Timer
     // let clock;
@@ -188,6 +211,7 @@ $(document).ready(function () {
             x.innerHTML = "Geolocation is not turned on.";
         }
     });
+    //$("p.hightext").css('--n',$("p.hightext").text().length);
     // $('#host-yif').submit(function (e) {
     //     e.preventDefault();
     //     $.ajax({
@@ -213,4 +237,75 @@ $(document).ready(function () {
     //         }
     //     })
     // })
+
+    // $(window).scroll(function () {
+    //     if (checkVisible($('.election-countdowntwo'))) {
+    //         //$(window).off('scroll');
+    //         // Wrap every letter in a span
+
+    //     }
+    // });
+    var textWrapper = document.querySelector('.hightext');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    anime.timeline({
+        loop: true
+    }).add({
+        targets: '.hightext .letter',
+        opacity: [0, 1],
+        duration: 150,
+        delay: (el, i) => 70 * i
+    });
+    // var $doc = $('#how-svg-wrapper'),
+    //     $win = $(window),
+    //     $svg = $('#how-svg-wrapper svg').drawsvg(),
+    //     max = $doc.height() - $win.height();
+    // //
+    // $win.on('scroll', function() {
+    //     var p = $('#how-svg-wrapper svg').scrollTop() / max; 
+    //     console.log(max);       
+    //     $svg.drawsvg('progress', p);
+    // });
+
+    // $('#how-svg-wrapper').on('scroll', function() {
+    //     if( $(this).scrollTop() >= $('#how-svg-wrapper').position().top ){
+    //         var $svg = $('#how-svg-wrapper svg').drawsvg();
+    //         $svg.drawsvg('animate');
+    //     }
+    // });
+    
+    gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, MotionPathPlugin);
+
+    gsap.defaults({ ease: "none" });
+
+    const barytdpulses = gsap.timeline({
+        defaults: {
+            scale: 1.0,
+            autoAlpha: 1,
+            transformOrigin: 'center',
+            ease: "elastic(2, 1)"
+        }
+    }).to(".ytdbartext01", {}, 1.0)
+        .to(".ytdbartext02", {}, 4.90)
+        .to(".ytdbartext03", {}, 5.35)
+        .to(".ytdbartext04", {}, 6.35)
+        .to(".ytdbartext05", {}, 7.35)
+        .to(".ytdbartext07", {}, 5.60)
+        .to(".ytdbartext06", {}, 15.60)
+
+    const mainytdbar = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#ytdsvgbar",
+            scrub: true,
+            start: "top center",
+            end: "bottom center"
+        }
+    })
+        .from(".theytdBar", { drawSVG: 0, duration: 2.0 })
+        .from(".theytdBarone", { drawSVG: 0, duration: 3.1 })
+        .from(".theytdBartwo", { drawSVG: 0, duration: 3.3 })
+        .from(".theytdBarthree", { drawSVG: 0, duration: 3.6 })
+        .from(".theytdBarfour", { drawSVG: 0, duration: 3.9 })
+        .from(".theytdBarfive", { drawSVG: 0, duration: 4.3 })
+        .add(barytdpulses, 0)
 });

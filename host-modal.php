@@ -12,10 +12,17 @@
                                 contact@youngindiafoundation.org
                             </span>
                         </p>
-                        <p>
-                            From : <input type="email" class="modalfield" name="email" placeholder="Email" aria-label="Email"
-                                required>
-                        </p>
+                        
+                        <div class="input-div one">
+                            <div class="i">
+
+                            </div>
+                            <div class="div">
+                                <h6>From :</h6>
+                                <input type="email" name="email" class="input modalfield" required="">
+                            </div>
+                        </div>
+                        
                         <p>
                             Subject : Host YIF
                         </p>
@@ -27,10 +34,17 @@
                             encourage civic engagement.
                         </p>
                         <p>Thank you</p>
-                        <p>
-                            <input type="text" class="modalfield" name="fullname" placeholder="Full Name" aria-label="Full Name"
-                                required>
-                        </p>
+                        
+                        <div class="input-div one">
+                            <div class="i">
+
+                            </div>
+                            <div class="div">
+                                <h6>Full Name</h6>
+                                <input type="text" name="fullname" class="input modalfield" required="">
+                            </div>
+                        </div>
+                        
                         <button type="submit" class="mailbutton btn btn-sm btn-primary">Send</button>
                     </div>
                 </form>

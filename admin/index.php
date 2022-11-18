@@ -34,6 +34,9 @@ include "header.php";
                                     End
                                 </th>
                                 <th>
+                                    Banner
+                                </th>
+                                <th>
                                     Venue
                                 </th>
                                 <th>
@@ -67,6 +70,9 @@ include "header.php";
                                 </td>
                                 <td>
                                     <?=date_format(date_create($event['end_date']), "d M y")?>
+                                </td>
+                                <td>
+                                    <img style="max-height: 150px;" src="../images/banner/<?=$event['banner']?>" alt="banner">
                                 </td>
                                 <td>
                                     <?=$event['venue']?>

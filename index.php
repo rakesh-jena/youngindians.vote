@@ -15,33 +15,40 @@ $elections = $database->query("SELECT * FROM election");
     <title>Voter Festival</title>
     <meta charset="utf-8">
 
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-    <link rel="icon" href="images/favicon/favicon.ico">
+    <link rel="manifest" href="images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">    
 
-    <!-- Twitter Card data -->
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://youngindians.vote/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Music + Art + Voting">
+    <meta property="og:description" content="We get people registered to vote and interested in India’s democracy. We're at concerts, festivals, colleges, community events — anywhere we can translate the power of music and culture into real action.">
+    <meta property="og:image" content="https://youngindians.vote/images/social.jpg">
+
+    <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@">
-    <meta name="twitter:site:id" content="">
-    <meta name="twitter:title" content="#">
-    <meta name="twitter:description" content="#">
-    <meta name="twitter:creator" content="@">
-    <meta name="twitter:creator:id" content="">
+    <meta property="twitter:domain" content="youngindians.vote">
+    <meta property="twitter:url" content="https://youngindians.vote/">
+    <meta name="twitter:title" content="Music + Art + Voting">
+    <meta name="twitter:description" content="We get people registered to vote and interested in India’s democracy. We're at concerts, festivals, colleges, community events — anywhere we can translate the power of music and culture into real action.">
+    <meta name="twitter:image" content="https://youngindians.vote/images/social.jpg">
 
-    <!-- Twitter summary card with large image must be at least 280x150px -->
-    <meta name="twitter:image:src" content="#">
-
-    <link rel="apple-touch-icon" href="#" />
-
-    <!-- Open Graph data -->
-    <meta property="og:title" content="Voter Festival" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="index.html" />
-    <meta property="og:image" content="#" />
-    <meta property="og:description" content="#" />
-    <meta property="og:site_name" content="#" />
+    <!-- Meta Tags Generated via https://www.opengraph.xyz -->
 
     <!--aos -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -80,22 +87,8 @@ $elections = $database->query("SELECT * FROM election");
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto d-flex">
-
                     <li class="nav-item">
                         <a class="nav-link text-uppercase" href="am-i-registered.php">Am i registered?</a>
-                    </li>
-
-                    <!--   <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-uppercase" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Am i registered?
-                        </a>
-                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item text-uppercase" href="#">Am i registered?</a></li>
-                            <li><a class="dropdown-item text-uppercase" href="#">voting in my state</a></li>
-                            <li><a class="dropdown-item text-uppercase" href="#">my polling place</a></li>
-                            <li><a class="dropdown-item text-uppercase" href="#">faq</a></li>
-                        </ul> -->
                     </li>
 
                     <li class="nav-item">
@@ -111,10 +104,6 @@ $elections = $database->query("SELECT * FROM election");
                         </a>
                     </li>
                 </ul>
-                <!-- <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form> -->
             </div>
         </div>
     </nav>
@@ -122,8 +111,7 @@ $elections = $database->query("SELECT * FROM election");
 
     <div id="page">
         <div class="keyart">
-            <h1 data-aos="fade-up" class="headertext textshadow">Music + Art + <font class="votingcolorchangetwo"
-                    color="#fff">Voting</font>
+            <h1 data-aos="fade-up" class="headertext textshadow">Music + Art + <font class="votingcolorchangetwo" color="#fff">Voting</font>
             </h1>
             <h5 data-aos="fade-up" class="headersubtext">Bringing civic engagement to Indian pop culture</h5>
             <div class="keyart_layer parallax" id="keyart-0" data-speed="2"></div> <!-- 00.0 -->
@@ -149,8 +137,7 @@ $elections = $database->query("SELECT * FROM election");
                         <p>
                             We get <strong>people registered to vote</strong> and interested in India’s democracy. We're
                             at <font color="#f0d185">concerts,
-                                festivals, colleges, community events</font> — anywhere we can translate the power of
-                            music and
+                            festivals, colleges, community events</font> — anywhere we can translate the power of music and
                             culture into real action.
                             <br><br>
                         </p>
@@ -159,8 +146,7 @@ $elections = $database->query("SELECT * FROM election");
                                 <?=voter_count();?>
                             </div>
                             <br>
-                            <div data-aos="zoom-in" data-aos-duration="2000" class="anton text-uppercase">Voters
-                                Registered</div>
+                            <div data-aos="zoom-in" data-aos-duration="2000" class="anton text-uppercase">Voters Registered</div>
                         </div>
                     </div>
                 </div>
@@ -171,8 +157,7 @@ $elections = $database->query("SELECT * FROM election");
                     <div class="container">
                         <div class="row">
                             <div class="y_voting-header col-md-6 col-12">
-                                <h2 data-aos="fade-right" class="anton headerfont">The Future is Young Indian's <span
-                                        class="votingcolorchange">Voting</span>.</h2>
+                                <h2 data-aos="fade-right" class="anton headerfont">The Future is Young Indian's <span class="votingcolorchange">Voting</span>.</h2>
 
 
                             </div>
@@ -195,41 +180,76 @@ $elections = $database->query("SELECT * FROM election");
                 <!--- section -->
 
                 <div class="section election-countdowntwo pb-4 pt-4 text-start text-white">
+                    <div class="container">
+                        <p class="hightext">We're gonna solve the youth urban voter gap. And make
+                            sure we
+                            have fun doing it.
+                        </p>
 
-                    <p data-aos="zoom-in" class="hightext">We're gonna solve the youth urban voter gap. And make sure we
-                        have fun doing it.
-                    </p>
+                    </div>
                 </div>
 
 
-                <!-- section -->
-                <div style="background-color:#d67f6c;" class="section y-voting pb-4 text-start">
-                    <div class="margintopspace"></div>
+               <!-- section -->
+                <div style="background-color:#d67f6c;" class="section y-voting text-start">
                     <div class="container">
                         <div class="row">
-
-                            <div class="margintopspacetwo"></div>
-                            <div class="col-8">
-                                <h3 class="anton headerfont">How?</h3>
-                                <p>We're teaming up with your favourite artists, to make sure that young Indians have
-                                    the
-                                    opportunity and access to be able to register to vote and participate in their civic
-                                    duty.
-                                </p>
-                                <p>Our partnership with local and state election officials will ensure that attendees at
-                                    these festivals are able to participate in an easier method of registration. It’s
-                                    time
-                                    young voters are taken seriously – while also having a good time.
-                                </p>
+                            <div class="col-12">
+                                <svg version="1.1" id="ytdsvgbar" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+                                    <style type="text/css">
+                                        .st0{fill:none;stroke:#000000;stroke-width:8;stroke-miterlimit:10;}
+                                        .st1{font-family:'Anton';}
+                                        .st11{font-family:'Roboto';}
+                                        .st2{font-size:48px;}
+                                        .st3{font-size:21px;}
+                                        .st4{fill:none;stroke:#000000;stroke-width:7;stroke-linecap:square;stroke-miterlimit:10;}
+                                        .st5{fill:none;stroke:#000000;stroke-width:7;stroke-miterlimit:10;}
+                                    </style>
+                                    <path class="theytdBartwo st5" d="M41,176h151.6v110H41V176z"/>
+                                    <path class="theytdBartwo st5" d="M306.2,176h151.6v110H306.2V176z"/>
+                                    <text  transform="matrix(1 0 0 1 200.6391 101.8133)" class="ytdbartext01 st1 headerfont st2">HOW?</text>
+                                    <text  transform="matrix(1 0 0 1 93.0969 214.0741)" class="ytdbartext03 st11 st3">Your</text>
+                                    <text  transform="matrix(1 0 0 1 72.3969 239.2741)" class="ytdbartext04 st11 st3">Favourite</text>
+                                    <text  transform="matrix(1 0 0 1 89.1969 264.4741)" class="ytdbartext05 st11 st3">artisit</text>
+                                    <text  transform="matrix(1 0 0 1 320.3998 213.8438)" class="ytdbartext03 st11 st3">Local &amp; State</text>
+                                    <text  transform="matrix(1 0 0 1 341.4998 239.0438)" class="ytdbartext04 st11 st3">Election</text>
+                                    <text  transform="matrix(1 0 0 1 341.9998 264.2438)" class="ytdbartext05 st11 st3">Officials</text>
+                                    <text  transform="matrix(1 0 0 1 156.4938 422.0606)" class="ytdbartext06 st1 st3">Young Indian’s Register </text>
+                                    <text  transform="matrix(1 0 0 1 229.7938 447.2606)" class="ytdbartext06 st1 st3">to Vote</text>
+                                    <text  transform="matrix(1 0 0 1 237.2929 250.6608)" class="ytdbartext07 st1 st2">+</text>
+                                    <g>
+                                        <g>
+                                            <path class="theytdBarone  st4" d="M164.5,84.5c0,0-63.3-3.7-67.8,67"/>
+                                            <g>
+                                                <polygon class="ytdbartext02" points="85.4,137.1 96.9,149.4 109.1,138 108.8,148.1 96.5,159.5 85.1,147.2 			"/>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    <g>
+                                        <g>
+                                            <g>
+                                                <path class="theytdBarone st5" d="M333.2,83c0,0,63.3-3.7,67.8,67"/>
+                                                <g>
+                                                    <polygon class="ytdbartext02" points="388.6,136.5 400.8,147.9 412.3,135.6 412.6,145.7 401.2,158 388.9,146.6 				"/>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    <g>
+                                        <g>
+                                            <line class="theytdBarfour st5" x1="252" y1="343.1" x2="252" y2="372.4"/>
+                                            <g>
+                                                <polygon class="ytdbartext06" points="240.1,358.5 252,370.3 263.9,358.5 263.9,368.5 252,380.4 240.1,368.5 			"/>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    <line class="theytdBarthree st5" x1="96.5" y1="302.6" x2="252" y2="343.1"/>
+                                    <line class="theytdBarthree st5" x1="406" y1="302.6" x2="250.5" y2="343.1"/>
+                                    <image style="overflow:visible;" width="960" height="960" xlink:href="images/11.png"  transform="matrix(0.1496 0 0 0.1496 44.9956 142.0237)">
+                                </svg>
                             </div>
-                            <div col-4></div>
                         </div>
-                        <!-- <div class="y_voting-lets-go text-start">
-                            <p>5, 6, 7, 8 - Let’s Go!</p>
-                        </div> -->
-
-                        <div class="marginbottomspace"></div>
-
                     </div>
                 </div>
 
@@ -242,48 +262,38 @@ $elections = $database->query("SELECT * FROM election");
                                 <img data-aos="fade-right" src="images/42.png" alt="We Are There">
                             </div>
                             <div class="celebration-header col-md-6 col-12">
-                                <h2 data-aos="fade-left" class="anton secondheaderfont">NO MATTER WHAT YOU’RE
-                                    CELEBRATING, YIF IS THERE.</h2>
+                                <h2 data-aos="fade-left" class="anton secondheaderfont">NO MATTER WHAT YOU’RE CELEBRATING, YIF IS THERE.</h2>
                                 <br>
                                 <h2 class="anton">
-                                    <span data-aos="fade-left" data-aos-duration="1200" class="v-act-whoare">Literary
-                                        Festivals</span>
-                                    <span data-aos="fade-left" data-aos-duration="1400" class="v-act-whoare">Slam Poetry
-                                        Events</span>
-                                    <span data-aos="fade-left" data-aos-duration="1600"
-                                        class="v-act-whoare">Concerts</span><br>
-                                    <span data-aos="fade-left" data-aos-duration="1800" class="v-act-whoare">Music
-                                        Festivals</span>
-                                    <span data-aos="fade-left" data-aos-duration="2000" class="v-act-whoare">Art
-                                        Fairs</span>
-                                    <span data-aos="fade-left" data-aos-duration="2200" class="v-act-whoare">Comedy
-                                        Stand Up</span>
-                                    <span data-aos="fade-left" data-aos-duration="2400" class="v-act-whoare">Carnatic
-                                        Concerts</span>
-                                    <span data-aos="fade-left" data-aos-duration="2600" class="v-act-whoare">College
-                                        Festivals</span>
-                                    <span data-aos="fade-left" data-aos-duration="2800" class="v-act-whoare">Fashion
-                                        Shows</span>
-                                </h2>
+                                    <span data-aos="fade-left" data-aos-duration="1200" class="v-act-whoare">Literary Festivals</span>
+                                    <span data-aos="fade-left" data-aos-duration="1400" class="v-act-whoare">Slam Poetry Events</span>
+                                    <span data-aos="fade-left" data-aos-duration="1600" class="v-act-whoare">Concerts</span><br>
+                                    <span data-aos="fade-left" data-aos-duration="1800" class="v-act-whoare">Music Festivals</span>
+                                    <span data-aos="fade-left" data-aos-duration="2000" class="v-act-whoare">Art Fairs</span>
+                                    <span data-aos="fade-left" data-aos-duration="2200" class="v-act-whoare">Comedy Stand Up</span>
+                                    <span data-aos="fade-left" data-aos-duration="2400" class="v-act-whoare">Carnatic Concerts</span>
+                                    <span data-aos="fade-left" data-aos-duration="2600" class="v-act-whoare">College Festivals</span>
+                                    <span data-aos="fade-left" data-aos-duration="2800" class="v-act-whoare">Fashion Shows</span>
+                                 </h2>
 
 
 
-                                <!--  <p>YIF’s voter registration drive is a robust network of artists and cultural events.
+                              <!--  <p>YIF’s voter registration drive is a robust network of artists and cultural events.
                                     From the underground rap scene to college and music fest seasons, to literary events
                                     – you can bet that we’ll be there encouraging you to register and become a voter!
                                 </p> -->
 
                             </div>
 
-                            <!-- <div class="event-calender">
+                        <!-- <div class="event-calender">
                             <h5>Check our calendar below for our upcoming schedule.</h5>
                             <p>[Can’t find an event, but think that we should be there? Write to us
                                 <a href="#">here</a>.]
                             </p>
                         </div> -->
-                        </div>
-                        <div class="marginbottomspace"></div>
                     </div>
+                    <div class="marginbottomspace"></div>
+                </div>
                 </div>
 
                 <!--We Are There-->
@@ -292,8 +302,7 @@ $elections = $database->query("SELECT * FROM election");
                         <div class="row">
                             <div class="margintopspace y_voting-action text-center">
                                 <div class="row">
-                                    <div data-aos="zoom-in" data-aos-duration="2000"
-                                        class="col-lg-4 col-sm-6 col-12 y_voting-action-items action-register">
+                                    <div data-aos="zoom-in" data-aos-duration="2000" class="col-lg-4 col-sm-6 col-12 y_voting-action-items action-register">
                                         <div class="inner-wrap">
                                             <h2 class="anton">I'm a<br><span class="v-act-who">voter</span></h2>
                                             <img src="images/voter.jpg" alt="voter">
@@ -302,8 +311,7 @@ $elections = $database->query("SELECT * FROM election");
                                             </a>
                                         </div>
                                     </div>
-                                    <div data-aos="zoom-in" data-aos-duration="2000"
-                                        class="col-lg-4 col-sm-6 col-12 y_voting-action-items action-ready">
+                                    <div data-aos="zoom-in" data-aos-duration="2000" class="col-lg-4 col-sm-6 col-12 y_voting-action-items action-ready">
                                         <div class="inner-wrap">
                                             <h2 class="anton">I'm a<br><span class="v-act-who">volunteer</span></h2>
                                             <img src="images/volunteer.jpeg" alt="volunteer">
@@ -312,13 +320,11 @@ $elections = $database->query("SELECT * FROM election");
                                             </a>
                                         </div>
                                     </div>
-                                    <div data-aos="zoom-in" data-aos-duration="2000"
-                                        class="col-lg-4 col-sm-6 col-12 y_voting-action-items action-volunteer">
+                                    <div data-aos="zoom-in" data-aos-duration="2000" class="col-lg-4 col-sm-6 col-12 y_voting-action-items action-volunteer">
                                         <div class="inner-wrap">
                                             <h2 class="anton">I'm an<br><span class="v-act-who">artist</span></h2>
                                             <img src="images/artist.jpg" alt="activist">
-                                            <a href="#" data-bs-toggle="modal" data-bs-target="#hostModal"
-                                                class="action-link">
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#hostModal" class="action-link">
                                                 Have us at your venue
                                             </a>
                                         </div>
@@ -326,12 +332,6 @@ $elections = $database->query("SELECT * FROM election");
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="event-calender">
-                            <h5>Check our calendar below for our upcoming schedule.</h5>
-                            <p>[Can’t find an event, but think that we should be there? Write to us
-                                <a href="#">here</a>.]
-                            </p>
-                        </div> -->
                     </div>
                     <div class="marginbottomspace"></div>
                 </div>
@@ -342,12 +342,10 @@ $elections = $database->query("SELECT * FROM election");
                     <div class="container">
                         <div data-aos="fade-right" data-aos-duration="2000" class="event-header">
                             <h2 class="anton whitetext">UPCOMING EVENTS & CONCERTS</h2>
-                            <p class="whitetext">These are just a few of our upcoming events and concerts. We
-                                register and engage voters
+                            <p class="whitetext">These are just a few of our upcoming events and concerts. We register and engage voters
                                 at hundreds of events nationwide.</p>
                         </div>
-                        <ul data-aos="fade-right" data-aos-duration="2000" class="nav nav-tabs" id="myTab"
-                            role="tablist">
+                        <ul data-aos="fade-right" data-aos-duration="2000" class="nav nav-tabs" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
                                     data-bs-target="#home-tab-pane" type="button" role="tab"
@@ -460,13 +458,11 @@ $elections = $database->query("SELECT * FROM election");
                     <div class="margintopspace"></div>
                     <div class="container">
 
-                        <h2 data-aos="zoom-in" style="text-align: center;" class="anton mb-4 bottomspacing">
-                            Countdown for the upcoming <span style="color:#000000;">state assembly elections</span>
-                        </h2>
+                        <h2 data-aos="zoom-in" style="text-align: center;" class="anton mb-4 bottomspacing">Countdown for the upcoming <span style="color:#000000;">state assembly elections</span></h2>
 
                         <div class="state-ec-wrapper">
                             <div class="row">
-                                <div data-aos="fade-right" class="col-6 col-lg-4">
+                                <div data-aos="fade-right"  class="col-6 col-lg-4">
                                     <div class="card state-ec">
                                         <img class="card-img-top" src="images/Gujarat.png" alt="Card image cap">
                                         <div class="card-body text-center">
@@ -474,7 +470,7 @@ $elections = $database->query("SELECT * FROM election");
                                             <p class="anton">
                                                 <?php $date = date_create("2022-12-01");?>
                                                 <?php $diff = date_diff($date, date_create(date('Y-m-d')));?>
-                                                <?=$diff->format('%a DAYS');?>
+                                                <?=$diff->format('%a DAYS');?> | <font color="#000">Dec 2022</font>
                                             </p>
                                         </div>
                                     </div>
@@ -487,12 +483,12 @@ $elections = $database->query("SELECT * FROM election");
                                             <p class="anton">
                                                 <?php $date = date_create("2023-02-01");?>
                                                 <?php $diff = date_diff($date, date_create(date('Y-m-d')));?>
-                                                <?=$diff->format('%a DAYS');?>
+                                                <?=$diff->format('%a DAYS');?> | <font color="#000">Feb 2023</font>
                                             </p>
                                         </div>
                                     </div>
                                 </div>
-                                <div data-aos="fade-left" class="col-6 col-lg-4">
+                                <div data-aos="fade-left"  class="col-6 col-lg-4">
                                     <div class="card state-ec">
                                         <img class="card-img-top" src="images/Karnataka.png" alt="Card image cap">
                                         <div class="card-body text-center">
@@ -500,12 +496,12 @@ $elections = $database->query("SELECT * FROM election");
                                             <p class="anton">
                                                 <?php $date = date_create("2023-05-01");?>
                                                 <?php $diff = date_diff($date, date_create(date('Y-m-d')));?>
-                                                <?=$diff->format('%a DAYS');?>
+                                                <?=$diff->format('%a DAYS');?> | <font color="#000">May 2023</font>
                                             </p>
                                         </div>
                                     </div>
                                 </div>
-                                <div data-aos="fade-right" class="col-6 col-lg-4">
+                                <div data-aos="fade-right"  class="col-6 col-lg-4">
                                     <div class="card state-ec">
                                         <img class="card-img-top" src="images/Chhattisgarh.png" alt="Card image cap">
                                         <div class="card-body text-center">
@@ -513,12 +509,12 @@ $elections = $database->query("SELECT * FROM election");
                                             <p class="anton">
                                                 <?php $date = date_create("2023-11-01");?>
                                                 <?php $diff = date_diff($date, date_create(date('Y-m-d')));?>
-                                                <?=$diff->format('%a DAYS');?>
+                                                <?=$diff->format('%a DAYS');?> | <font color="#000">Dec 2023</font>
                                             </p>
                                         </div>
                                     </div>
                                 </div>
-                                <div data-aos="zoom-in" class="col-6 col-lg-4">
+                                <div data-aos="zoom-in"   class="col-6 col-lg-4">
                                     <div class="card state-ec">
                                         <img class="card-img-top" src="images/Mizoram.png" alt="Card image cap">
                                         <div class="card-body text-center">
@@ -526,7 +522,7 @@ $elections = $database->query("SELECT * FROM election");
                                             <p class="anton">
                                                 <?php $date = date_create("2023-11-01");?>
                                                 <?php $diff = date_diff($date, date_create(date('Y-m-d')));?>
-                                                <?=$diff->format('%a DAYS');?>
+                                                <?=$diff->format('%a DAYS');?> | <font color="#000">Dec 2023</font>
                                             </p>
                                         </div>
                                     </div>
@@ -539,7 +535,7 @@ $elections = $database->query("SELECT * FROM election");
                                             <p class="anton">
                                                 <?php $date = date_create("2023-12-01");?>
                                                 <?php $diff = date_diff($date, date_create(date('Y-m-d')));?>
-                                                <?=$diff->format('%a DAYS');?>
+                                                <?=$diff->format('%a DAYS');?> | <font color="#000">Dec 2023</font>
                                             </p>
                                         </div>
                                     </div>
@@ -548,7 +544,7 @@ $elections = $database->query("SELECT * FROM election");
                         </div>
 
                         <!-- Count Timer -->
-                        <!-- Count Timer -->
+                         <!-- Count Timer -->
                         <div data-aos="zoom-in" class="countdown-timer">
                             <div class="row">
                                 <div class="col-12" id="clock">
@@ -562,9 +558,8 @@ $elections = $database->query("SELECT * FROM election");
                     </div>
                     <div class="marginbottomspace"></div>
                 </div>
+
                 <!--FAQ-->
-
-
                 <div class="section faq text-start pb-4 pt-4">
                     <div class="container">
                         <h2 class="anton">faq's</h2>
@@ -580,8 +575,7 @@ $elections = $database->query("SELECT * FROM election");
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         <p>
-                                            To learn more about the stories of people who shape this campaign, watch
-                                            our
+                                            To learn more about the stories of people who shape this campaign, watch our
                                             video for the Be Seen Be Heard Campaign.
                                         </p>
                                     </div>
@@ -598,36 +592,27 @@ $elections = $database->query("SELECT * FROM election");
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         <p>Young people's exclusion from the nation's political processes results in
-                                            political inertia. This can either be due to systemic complications in
-                                            their
-                                            participation as voters or a function of biases against them due to
-                                            their
-                                            age, disallowing them to take part as elected representatives (more on
-                                            this
+                                            political inertia. This can either be due to systemic complications in their
+                                            participation as voters or a function of biases against them due to their
+                                            age, disallowing them to take part as elected representatives (more on this
                                             can be found at why25.in).
-                                            YIF’s Youth Voter Festivals are a way to bridge the gap between young
-                                            people
+                                            YIF’s Youth Voter Festivals are a way to bridge the gap between young people
                                             and their civic duty as democratic citizens.
                                         </p>
                                         <p>Since we all have a part to play in the democracy of India, Young India
                                             Foundation is helping young people claim their role as voters. At a
                                             festival, our volunteers prompt and guide you through the process of
                                             registering as eligible voters - whether you have not been registered
-                                            previously or hold a Voter’s ID card and have recently moved. This is
-                                            done
-                                            in coordination with the Election Commission of India, which ensures
-                                            that
+                                            previously or hold a Voter’s ID card and have recently moved. This is done
+                                            in coordination with the Election Commission of India, which ensures that
                                             your registration is legally valid.
                                         </p>
                                         <p>
-                                            Young people are dynamic and ever-moving across the country. A key
-                                            mission
+                                            Young people are dynamic and ever-moving across the country. A key mission
                                             of this campaign is to help those who have moved to different cities for
-                                            college to become valid changemakers for their new constituency through
-                                            the
+                                            college to become valid changemakers for their new constituency through the
                                             process of re-registration. Your active participation in a new city’s
-                                            economy, for even 3-4 years can make a difference, and this is
-                                            acknowledged
+                                            economy, for even 3-4 years can make a difference, and this is acknowledged
                                             when your voice is heard.
                                         </p>
                                     </div>
@@ -645,26 +630,19 @@ $elections = $database->query("SELECT * FROM election");
                                     aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         <p>
-                                            Yes! Keep in mind that having a Voter’s identity card does not ensure
-                                            that
-                                            you are added onto an electoral roll for an election at the municipal,
-                                            state
-                                            or national level. Booth Level Officers (BLOs) undertake a vetting
-                                            process
-                                            before any election process, and consequently keep or remove your name
-                                            from
+                                            Yes! Keep in mind that having a Voter’s identity card does not ensure that
+                                            you are added onto an electoral roll for an election at the municipal, state
+                                            or national level. Booth Level Officers (BLOs) undertake a vetting process
+                                            before any election process, and consequently keep or remove your name from
                                             the electoral roll.
                                         </p>
                                         <p>
-                                            To ensure that you are included in the list of voters, check your name
-                                            here.
-                                            All you need to enter is your EPIC number [your voter ID number, also
-                                            known
+                                            To ensure that you are included in the list of voters, check your name here.
+                                            All you need to enter is your EPIC number [your voter ID number, also known
                                             as the Electors Photo Identity Card number], and state of registration.
                                         </p>
                                         <p>
-                                            We are happy to help you navigate this process at a festival as well -
-                                            and
+                                            We are happy to help you navigate this process at a festival as well - and
                                             guide you through re-registration, if needed!
                                         </p>
                                     </div>
@@ -682,22 +660,16 @@ $elections = $database->query("SELECT * FROM election");
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         <p>
-                                            Volunteers are the heart of Young India Foundation. Over the years, we
-                                            have
-                                            had the opportunity to work with over 300 young people. There are
-                                            volunteers
-                                            of every age, educational background and political ideology, but all
-                                            share a
-                                            love of democracy and youth rights. They are organised into state-wise
-                                            teams
+                                            Volunteers are the heart of Young India Foundation. Over the years, we have
+                                            had the opportunity to work with over 300 young people. There are volunteers
+                                            of every age, educational background and political ideology, but all share a
+                                            love of democracy and youth rights. They are organised into state-wise teams
                                             in major cities across the country, with a core team of full-time YIF
                                             members supporting them in-turn, every step of the way.
                                         </p>
                                         <p>
-                                            Those who excel are given opportunities to become "Team Leaders," travel
-                                            to
-                                            festivals and workshops, or earn money as paid representatives. We are
-                                            happy
+                                            Those who excel are given opportunities to become "Team Leaders," travel to
+                                            festivals and workshops, or earn money as paid representatives. We are happy
                                             to sponsor you and one friend to travel to a festival that requires
                                             volunteers, with a chance to meet and hang out with the artists!
                                         </p>
@@ -717,12 +689,9 @@ $elections = $database->query("SELECT * FROM election");
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         <p>
-                                            We would love to have you join the team to expand our ongoing
-                                            initiatives
-                                            and drive forward the national movement for youth rights and
-                                            representation.
-                                            You can read about YIF’s projects on <a href="#">our website</a>, and
-                                            apply
+                                            We would love to have you join the team to expand our ongoing initiatives
+                                            and drive forward the national movement for youth rights and representation.
+                                            You can read about YIF’s projects on <a href="#">our website</a>, and apply
                                             using <a href="#">this form</a>.
                                         </p>
                                     </div>
@@ -761,6 +730,7 @@ $elections = $database->query("SELECT * FROM election");
 // }
 ?>
                 </div> -->
+
                 <!-- Footer start-->
                 <div class="section bg-black pt-4">
                     <div class="container">
@@ -771,8 +741,7 @@ $elections = $database->query("SELECT * FROM election");
                             </a>
                         </div>
                         <p class="aligncenter basicblock__copy">
-                            Young India Foundation is a public trust registered u/s 12A of the Income Tax Act, 1961,
-                            and
+                            Young India Foundation is a public trust registered u/s 12A of the Income Tax Act, 1961, and
                             with the Director of Income Tax (Exemptions) u/s 80G.
                         </p>
                         <ul class="footer__stacklist">
@@ -902,8 +871,7 @@ $elections = $database->query("SELECT * FROM election");
                             </div>
                         </div>
                         <small>
-                            <p class="aligncenter mb-0 pb-4 text-white" style="font-size: 0.5em; margin-top: 10px;">
-                                Designed by Kwad
+                            <p class="aligncenter mb-0 pb-4 text-white" style="font-size: 0.5em; margin-top: 10px;">Designed by Kwad
                             </p>
                         </small>
                     </div>
@@ -914,6 +882,7 @@ $elections = $database->query("SELECT * FROM election");
             </div>
         </div>
     </div>
+
     <?php include "event-modal.php";?>
     <?php include "host-modal.php";?>
     <?php if (isset($_GET['modal'])) {?>
@@ -935,6 +904,13 @@ $elections = $database->query("SELECT * FROM election");
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.js"></script> -->
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <!-- plugins --->
+
+    <script src="js/gsap-latest-beta.min.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <script src="https://www.ili.ir/Components/General/Resources/Scripts/GSAP/DrawSVGPlugin.min.js"></script>
+    <script src="js/MotionPathPlugin.min.js"></script>
     <!--aos script -->
     <script>
     AOS.init({

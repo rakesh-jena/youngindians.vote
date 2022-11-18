@@ -1,4 +1,4 @@
-<?php 
+<?php
 include "config.php";
 require 'Carbon/autoload.php';
 
@@ -23,18 +23,18 @@ if (isset($_POST['fname'])) {
     }
 }
 
-function volunteer_mail($email_to,$firstname,$event,$date)
+function volunteer_mail($email_to, $firstname, $event, $date)
 {
     $to = $email_to;
     $subject = "Volunteer YIF";
-    
+
     $message = '
     <html>
     <head>
     <title>Volunteer!</title>
     </head>
     <body>
-    <p>Hello '.$firstname.',</p>
+    <p>Hello ' . $firstname . ',</p>
     <p>
         Thank you for your interest in volunteering for democracy. You will be considered for
         <strong>"<?=$event?>"</strong>
@@ -50,43 +50,43 @@ function volunteer_mail($email_to,$firstname,$event,$date)
     </body>
     </html>
     ';
-    
+
     // It is mandatory to set the content-type when sending HTML email
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-    
+
     // More headers. From is required, rest other headers are optional
     $headers .= 'From: <contact@youngindiafoundation.org>' . "\r\n";
-    
-    mail($to,$subject,$message,$headers);
+
+    mail($to, $subject, $message, $headers);
 }
 
-function host_mail($email_to,$firstname)
+function host_mail($email_to, $firstname)
 {
     $to = $email_to;
     $subject = "Host YIF";
-    
+
     $message = "
     <html>
     <head>
     <title>Host YIF at your Event!</title>
     </head>
     <body>
-    <p>Hello ".$firstname.",</p>
+    <p>Hello " . $firstname . ",</p>
     <p>Thank you for your submission!</p>
     <p>We will be in touch soon; don’t forget to check your inbox and spam for updates.</p>
     </body>
     </html>
     ";
-    
+
     // It is mandatory to set the content-type when sending HTML email
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-    
+
     // More headers. From is required, rest other headers are optional
     $headers .= 'From: <contact@youngindiafoundation.org>' . "\r\n";
-    
-    mail($to,$subject,$message,$headers);
+
+    mail($to, $subject, $message, $headers);
 }
 
 function voter_count()
@@ -106,7 +106,8 @@ function voter_count()
     echo $html;
 }
 
-function firstname($name){
+function firstname($name)
+{
     $parts = explode(" ", $name);
     $firstname = $parts[0];
     return $firstname;
@@ -118,8 +119,8 @@ function host_event()
     $sql = "insert into `host_event`(`fullname`, `email`) values('" . $_POST['fullname'] . "', '" . $_POST['email'] . "')";
     $res = $db->query($sql);
     $firstname = firstname($_POST['fullname']);
-    host_mail($_POST['email'],$firstname);
-    header('location:index.php?modal=th-host&firstname='.$firstname.'');
+    host_mail($_POST['email'], $firstname);
+    header('location:index.php?modal=th-host&firstname=' . $firstname . '');
 }
 
 function volunteer_event()
@@ -130,8 +131,8 @@ function volunteer_event()
 
     $event = $db->query("select * from vf_events where id=" . $_POST['event-id'] . "")->fetch_assoc();
     $firstname = firstname($_POST['fullname']);
-    volunteer_mail($_POST['email'],$firstname,$event['name'],$event['start_date']);
-    header('location:index.php?modal=th-vol&event=' . urlencode($event['name']) . '&date=' . $event['start_date'] . '&firstname='.$firstname.'');
+    volunteer_mail($_POST['email'], $firstname, $event['name'], $event['start_date']);
+    header('location:index.php?modal=th-vol&event=' . urlencode($event['name']) . '&date=' . $event['start_date'] . '&firstname=' . $firstname . '');
 }
 
 function near_me()
@@ -200,20 +201,44 @@ function e_details()
     $html .= '<form id="event-yif-form" method="POST" action="function.php">
     <div class="row">
         <div class="col-md-6 col-12 mb-2">
-            <input type="text" class="form-control modalfield" name="fullname" placeholder="Full Name"
-                aria-label="Full Name" required>
+            <div class="input-div one">
+                <div class="i">
+
+                </div>
+                <div class="div">
+                    <h6>Full Name</h6>
+                    <input type="text" name="fullname" class="input modalfield" required="">
+                </div>
+            </div>
         </div>
         <div class="col-md-6 col-12 mb-2">
-            <input type="email" class="form-control modalfield" name="email" placeholder="Email"
-                aria-label="Email" required>
+            <div class="input-div one">
+                <div class="i">
+
+                </div>
+                <div class="div">
+                    <h6>Email</h6>
+                    <input type="email" name="email" class="input modalfield" required>
+                </div>
+            </div>
         </div>
         <div class="col-md-6 col-3 mb-2">
-            <input type="number" class="form-control modalfield" name="age" placeholder="Age" aria-label="Age"
-                required>
+            <div class="input-div one">
+                <div class="i"></div>
+                <div class="div">
+                    <h6>Age</h6>
+                    <input type="number" name="age" class="input modalfield" required>
+                </div>
+            </div>
         </div>
         <div class="col-md-6 col-9 mb-2">
-            <input type="number" class="form-control modalfield" name="mobile" placeholder="Mobile Number"
-                aria-label="Mobile Number" required>
+            <div class="input-div one">
+                <div class="i"></div>
+                <div class="div">
+                    <h6>Mobile</h6>
+                    <input type="number" name="mobile" class="input modalfield" required>
+                </div>
+            </div>
         </div>
         <input type="hidden" name="event-id" value="' . $event["id"] . '">
         <input type="hidden" name="fname" value="volunteer-event">
@@ -238,10 +263,10 @@ function calender()
     $date = Carbon::parse($fe['start_date']);
     $startOfCalendar = $date->copy()->firstOfMonth()->startOfWeek(Carbon::SUNDAY);
     $endOfCalendar = $date->copy()->lastOfMonth()->endOfWeek(Carbon::SATURDAY);
-    
-    if($last_date->year === $date->year){
+
+    if ($last_date->year === $date->year) {
         $diff = $last_date->month - $date->month;
-    } else if($last_date->year > $date->year){
+    } else if ($last_date->year > $date->year) {
         $diff = 12 - $date->month;
         $diff += $last_date->month;
     }
